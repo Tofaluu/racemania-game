@@ -7,8 +7,8 @@
 ## How to Play
 Two racers enter, but only one wins. Share the keyboard to control your cars:
 
-* **🏎️ Player 1 (Lightning McQueen):** Use the **WASD** keys to drive.
-* **🏎️ Player 2 (F1 Car):** Use the **Arrow Keys** to drive.
+* **🏎️ Player 1:** Use the **WASD** keys to drive.
+* **🏎️ Player 2:** Use the **Arrow Keys** to drive.
 
 ## 🛠️ Development & Source Code
 Curious about how this was built? You can view the full Unity project, C# scripts, and assets in the main repository.
