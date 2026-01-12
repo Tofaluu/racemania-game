@@ -20,11 +20,23 @@
         align-items: center;
       }
       #unity-canvas {
+        width: 1920px;
+        height: 1080px;
         max-width: 85vw;
         max-height: 85vh;
-        width: auto;
-        height: auto;
         background: #000000;
+      }
+      @media (max-aspect-ratio: 16/9) {
+        #unity-canvas {
+          width: 85vw;
+          height: calc(85vw * 9 / 16);
+        }
+      }
+      @media (min-aspect-ratio: 16/9) {
+        #unity-canvas {
+          width: calc(85vh * 16 / 9);
+          height: 85vh;
+        }
       }
     </style>
   </head>
@@ -32,13 +44,13 @@
     <div id="unity-container">
       <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
     </div>
-    <script src="Build/racemania.loader.js"></script>
+    <script src="Build/racemania-builds.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/racemania.data",
-        frameworkUrl: "Build/racemania.framework.js",
-        codeUrl: "Build/racemania.wasm",
+        dataUrl: "Build/racemania-builds.data",
+        frameworkUrl: "Build/racemania-builds.framework.js",
+        codeUrl: "Build/racemania-builds.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Tofalu",
         productName: "RaceMania",
